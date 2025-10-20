@@ -1,16 +1,21 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 5173,           // only used in local dev
-    open: true
+{
+  "name": "smart-note-organizer-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  build: {
-    outDir: "dist",       // Render serves the 'dist' folder
-    emptyOutDir: true,    // Clean 'dist' before building
-    sourcemap: false      // optional, smaller build
+  "dependencies": {
+    "axios": "^1.5.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.15.0"
   },
-  base: "./"              // ensures relative paths in production
-});
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
